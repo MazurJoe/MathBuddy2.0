@@ -9,8 +9,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class QuizScreen extends AppCompatActivity {
-
+public class QuizScreenSGL extends AppCompatActivity {
     ArrayList<String> equations = new ArrayList<String>();
     TextView problem;
     public int numOfProblems;
@@ -20,7 +19,7 @@ public class QuizScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_quiz_screen);
+        setContentView(R.layout.activity_quiz_screen_sgl);
 
         equations.add("17 + 9");
         equations.add("13 + 1");
@@ -34,27 +33,21 @@ public class QuizScreen extends AppCompatActivity {
         problem = (TextView) findViewById(R.id.textView7);
         problem.setText(equations.get(0));
 
-        next_Finish = (Button) findViewById(R.id.next_Finish);
+        next_Finish = (Button) findViewById(R.id.button14);
         next_Finish.setText("Next Question");
-
-
     }
 
-
-    public void onClick(View v){
+    public void onClick(View v) {
         counter++;
 
-        if(counter < numOfProblems)
+        if (counter < numOfProblems)
             problem.setText(equations.get(counter));
 
-        else if(counter == numOfProblems){
+        else if (counter == numOfProblems) {
             problem.setText(equations.get(counter));
             next_Finish.setText("Finish");
+        } else {
+            startActivity(new Intent(QuizScreenSGL.this, ResultScreen.class));
         }
-
-        else{
-            startActivity(new Intent(QuizScreen.this, ResultScreen.class));
-        }
-
     }
 }

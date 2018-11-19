@@ -12,13 +12,7 @@
         <activity
             android:name=".Login"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ClassesScreenTeacher"
             android:label="Classes"
@@ -35,7 +29,7 @@
         <activity
             android:name=".QuizGrade"
             android:theme="@style/AppTheme.CustomThemePopUpQuizGrade" />
-        <activity android:name=".ClassesScreenStudent" />
+        <activity android:name=".ClassesScreenStudent"></activity>
         <activity android:name=".IndividualClassScreenStudent" />
         <activity
             android:name=".AttemptQuizPopUp"
@@ -45,7 +39,22 @@
             android:name=".AddStudentPopUp"
             android:theme="@style/AppTheme.CustomThemePopUpAddStudent" />
         <activity android:name=".QuizScreen" />
-        <activity android:name=".ResultScreen"></activity>
+        <activity android:name=".ResultScreen" />
+        <activity
+            android:name=".CreateQuizError"
+            android:theme="@style/AppTheme.CustomThemePopUpCreateQuizError" />
+        <activity android:name=".Login2" />
+        <activity
+            android:name=".RemoveStudentPopUp"
+            android:theme="@style/AppTheme.CustomThemePopUpRemoveStudent" />
+        <activity android:name=".QuizGadesScreenSGL">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".QuizScreenSGL"></activity>
     </application>
 
 </manifest>
