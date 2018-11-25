@@ -31,6 +31,7 @@ public class RandomProblemGenerator
     
     /**
      * Generates an ArrayList with object type Problem with ProblemType Basic.
+     * @param inSeed  inputed seed
      * @param numOfProb int for number of problems to be in the set.
      * @param probOps ArrayList of type Character that stores operations to be in problems, i.e. any char from set: {'+', '-', '*', '/', '^'}.
      * @param lowProbLen integer value lower bound for number of numbers within problem(s), e.g. 2 -> 1 + 2, 3 -> 1 + 2 + 3, must be greater than 2.
@@ -41,8 +42,10 @@ public class RandomProblemGenerator
      * @param numOfDecimals integer value for number of decimal places to be in double.
      * @return basicProbSet ArrayList of type Problem
      */
-    public static ArrayList<Problem> genBasicProbSet(int numOfProb, ArrayList<Character> probOps, int lowProbLen, int highProbLen, int lowNumRange, int highNumRange, boolean decimalNums, int numOfDecimals)
+    public static ArrayList<Problem> genBasicProbSet(long inSeed,int numOfProb, ArrayList<Character> probOps, int lowProbLen, int highProbLen, int lowNumRange, int highNumRange, boolean decimalNums, int numOfDecimals)
     {
+        RandomGenerator.setSeed(inSeed);
+
         ArrayList<Problem> basicProbSet = new ArrayList();
         
         //Checks if lower number bound is greater than upper number bound, switch if true.
