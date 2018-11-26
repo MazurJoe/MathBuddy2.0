@@ -35,6 +35,41 @@ public class CreateActivitySGL extends AppCompatActivity {
     }
 
     public void onClickStartQuiz(View v){
-        startActivity(new Intent(CreateActivitySGL.this, QuizScreen.class));
+        EditText quizNameField = (EditText) findViewById(R.id.editText7);
+        String quizName = quizNameField.getText().toString();
+        System.out.println(quizName);
+        if(quizName.matches("")) {
+            emptyField("Enter a name for the quiz.");
+            return;
+        }
+
+        EditText rangeFromField = (EditText) findViewById(R.id.editText3);
+        if(rangeFromField.getText().toString().matches("")){
+            emptyField("Enter a number in the Range From field.");
+            return;
+        }
+        int rangeFrom = Integer.parseInt(rangeFromField.getText().toString());
+
+        EditText rangeToField = (EditText) findViewById(R.id.editText4);
+        if(rangeToField.getText().toString().matches("")){
+            emptyField("Enter a number in the Range To field");
+            return;
+        }
+        int rangeTo = Integer.parseInt(rangeToField.getText().toString());
+
+        EditText numOfProblemsField = (EditText) findViewById(R.id.editText5);
+        if(numOfProblemsField.getText().toString().matches("")){
+            emptyField("Enter the number of problems for the quiz.");
+            return;
+        }
+
+
+        startActivity(new Intent(CreateActivitySGL.this, QuizScreenSGL.class));
+    }
+
+    public void emptyField(String string){
+        Intent intent = new Intent(CreateActivitySGL.this, CreateQuizError.class);
+        intent.putExtra("Empty Field", string);
+        startActivity(intent);
     }
 }

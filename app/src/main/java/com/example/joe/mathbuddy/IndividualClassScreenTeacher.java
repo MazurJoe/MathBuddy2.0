@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
@@ -45,6 +46,19 @@ public class IndividualClassScreenTeacher extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        studentsListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(IndividualClassScreenTeacher.this, RemoveStudentPopUp.class);
+                intent.putExtra("Student to Remove", "Are you sure you want to remove "+studentsListView.getItemAtPosition(position).toString()+" from the class?");
+                startActivity(intent);
+
+                return true;
+            }
+        });
+
+
 
         studentsList.add("Student 1");
         studentsList.add("Student 2");

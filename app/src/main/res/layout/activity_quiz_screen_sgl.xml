@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".QuizScreen">
+    tools:context=".QuizScreenSGL">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/textView7"
         android:layout_width="0dp"
         android:layout_height="110dp"
         android:layout_marginTop="76dp"
@@ -15,34 +15,33 @@
         android:text="@string/textview"
         android:textSize="48sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/next_Finish"
+        android:id="@+id/button14"
         android:layout_width="306dp"
         android:layout_height="104dp"
         android:layout_marginEnd="52dp"
         android:layout_marginRight="52dp"
         android:layout_marginBottom="40dp"
-        android:onClick="onClick"
         android:text="@string/button"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
-        android:id="@+id/answer"
+        android:id="@+id/editText8"
         android:layout_width="438dp"
         android:layout_height="97dp"
         android:layout_marginTop="384dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="@string/answer"
         android:inputType="number"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>
