@@ -36,7 +36,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:title="Teesting"
-        app:titleTextColor="#B7B7B7" />
+        app:titleTextColor="@android:color/white" />
 
     <Button
         android:id="@+id/button8"

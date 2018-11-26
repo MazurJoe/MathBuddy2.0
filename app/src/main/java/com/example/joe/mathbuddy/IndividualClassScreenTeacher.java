@@ -62,11 +62,10 @@ public class IndividualClassScreenTeacher extends AppCompatActivity {
             }
         });
 
-
-
+        //fake data for demo
         studentsList.add("Kevin Smith");
         studentsList.add("Tom Berry");
-        studentsList.add("Katlin ");
+        studentsList.add("Katlin Davis");
         studentsList.add("Carlos Robbins");
         studentsList.add("Damon Patterson");
         studentsList.add("Lindsay Brady");

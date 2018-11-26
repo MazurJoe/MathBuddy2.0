@@ -24,13 +24,13 @@ public class QuizGrade extends AppCompatActivity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int) (.4*width), (int) (.3*height));
+        getWindow().setLayout((int) (.5*width), (int) (.4*height));
 
         quizGrade = (TextView) findViewById(R.id.grade);
+        toolbar = (Toolbar) findViewById(R.id.toolbar2);
 
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
-            toolbar = (Toolbar) findViewById(R.id.toolbar2);
             setSupportActionBar(toolbar);
             getSupportActionBar().setTitle(bundle.getString("Quiz Name"));
             position = bundle.getInt("Position");
@@ -85,6 +85,8 @@ public class QuizGrade extends AppCompatActivity {
                 break;
             case 20:
                     quizScore = "71.21%";
+                    setSupportActionBar(toolbar);
+                    getSupportActionBar().setTitle("Average Grade");
                     break;
         }
 
