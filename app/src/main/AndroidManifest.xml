@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.joe.mathbuddy">
 
+    <uses-permission android:name="android.permission.INTERNET">
+    </uses-permission>
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE">
+
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,9 +19,17 @@
         <activity
             android:name=".Login"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
         <activity
-            android:name=".ClassesScreenTeacher"
+            android:name=".ClassesScreenTeacher">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
             android:label="Classes"
             android:theme="@style/AppTheme" />
         <activity
@@ -29,7 +44,7 @@
         <activity
             android:name=".QuizGrade"
             android:theme="@style/AppTheme.CustomThemePopUpQuizGrade" />
-        <activity android:name=".ClassesScreenStudent"></activity>
+        <activity android:name=".ClassesScreenStudent" />
         <activity android:name=".IndividualClassScreenStudent" />
         <activity
             android:name=".AttemptQuizPopUp"
@@ -48,13 +63,10 @@
             android:name=".RemoveStudentPopUp"
             android:theme="@style/AppTheme.CustomThemePopUpRemoveStudent" />
         <activity android:name=".QuizGadesScreenSGL">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".QuizScreenSGL"></activity>
+        <activity android:name=".QuizScreenSGL" />
+        <activity android:name=".ResultScreenSGL"></activity>
     </application>
 
 </manifest>

@@ -9,8 +9,8 @@
     <TextView
         android:id="@+id/textView7"
         android:layout_width="0dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="76dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="@string/textview"
         android:textSize="48sp"
@@ -21,13 +21,14 @@
 
     <Button
         android:id="@+id/button14"
-        android:layout_width="306dp"
-        android:layout_height="104dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginRight="52dp"
-        android:layout_marginBottom="40dp"
+        android:layout_width="176dp"
+        android:layout_height="61dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="14dp"
+        android:onClick="onClick"
         android:text="@string/button"
-        android:textSize="24sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
@@ -35,7 +36,7 @@
         android:id="@+id/editText8"
         android:layout_width="438dp"
         android:layout_height="97dp"
-        android:layout_marginTop="384dp"
+        android:layout_marginTop="164dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/answer"

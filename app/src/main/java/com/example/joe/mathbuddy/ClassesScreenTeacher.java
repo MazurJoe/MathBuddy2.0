@@ -23,6 +23,7 @@ public class ClassesScreenTeacher extends AppCompatActivity {
         setContentView(R.layout.activity_classes_screen_teacher);
 
 
+        //waits for a class in the list to be clicked so it may pass the correct data
         classesListView = findViewById(R.id.classesList_View);
         classesListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -34,23 +35,12 @@ public class ClassesScreenTeacher extends AppCompatActivity {
         });
 
 
-
-        classesList.add("Class 1");
-        classesList.add("Class 2");
-        classesList.add("Class 3");
-        classesList.add("Class 4");
-        classesList.add("Class 5");
-        classesList.add("Class 6");
-        classesList.add("Class 7");
-        classesList.add("Class 8");
-        classesList.add("Class 9");
-        classesList.add("Class 10");
-        classesList.add("Class 11");
-        classesList.add("Class 12");
-        classesList.add("Class 13");
-        classesList.add("Class 14");
-        classesList.add("Class 15");
-        classesList.add("Class 16");
+        //Stub data for demo
+        classesList.add("Frist Period Math");
+        classesList.add("Second Period Math");
+        classesList.add("Third Period Math");
+        classesList.add("Fourth Period Math");
+        classesList.add("Fith Period Math");
 
 
         adapter = new ArrayAdapter(ClassesScreenTeacher.this, android.R.layout.simple_list_item_1, classesList);
@@ -59,6 +49,7 @@ public class ClassesScreenTeacher extends AppCompatActivity {
 
     }
 
+    //create class pop Up on click
     public void newClassOnClick(View v){
         startActivity(new Intent(ClassesScreenTeacher.this,ClassPopUp.class));
 

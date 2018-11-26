@@ -19,18 +19,19 @@
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar4"
-        android:layout_width="503dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toStartOf="@+id/toolbar5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar3"
         app:title="Completed Quizes" />
 
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar5"
-        android:layout_width="503dp"
+        android:layout_width="304dp"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
         android:minHeight="?attr/actionBarSize"
@@ -41,13 +42,14 @@
 
     <android.support.v7.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="502dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:paddingBottom="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/cardView4"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar4"
-        app:layout_constraintVertical_bias="0.235" >
+        app:layout_constraintVertical_bias="0.235">
 
         <ListView
             android:id="@+id/completedQuizList_View"
@@ -57,7 +59,8 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:layout_width="503dp"
+        android:id="@+id/cardView4"
+        android:layout_width="304dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -29,6 +29,7 @@ public class IndividualClassScreenStudent extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_indevidual_class_screen_student);
 
+        //gets the name of the class clicked on and chenges the text of the toolbar
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
             toolbar = (Toolbar) findViewById(R.id.toolbar3);
@@ -36,6 +37,7 @@ public class IndividualClassScreenStudent extends AppCompatActivity {
             getSupportActionBar().setTitle(bundle.getString("Class Name"));
         }
 
+        //displays the grade of a compleated quiz when clicked
         completedQuizListView = findViewById(R.id.completedQuizList_View);
         completedQuizListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -46,6 +48,7 @@ public class IndividualClassScreenStudent extends AppCompatActivity {
             }
         });
 
+        //attempt quiz popup for clicked quiz appears
         activeQuizListView = findViewById(R.id.activeQuizList_View);
           activeQuizListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
              @Override

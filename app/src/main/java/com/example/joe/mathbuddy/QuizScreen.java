@@ -40,7 +40,19 @@ public class QuizScreen extends AppCompatActivity {
 
     }
 
-
+    /**when a user clicks the button, the system first checks if the user answerd the question
+     * if they did not, the system adds the correct answer + 10 to the arrayList that contains the users answers
+     *
+     * the system clears the answer field after a user answers
+     *
+     * the button reads "next question" up to question n-1. on question n, the button reads "finish"
+     *
+     * when the user clicks the button that reads "finish", the system grades all of the users answers by
+     * comparing them to the correct answer
+     *
+     * the system then passes the grade the user got to the result screen
+     *
+     */
     public void onClick(View v){
         counter++;
 

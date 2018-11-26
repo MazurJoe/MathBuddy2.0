@@ -8,11 +8,11 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="226dp"
-        android:layout_height="86dp"
-        android:layout_marginEnd="84dp"
-        android:layout_marginRight="84dp"
-        android:layout_marginBottom="68dp"
+        android:layout_width="184dp"
+        android:layout_height="69dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="16dp"
         android:onClick="onClickStartQuiz"
         android:text="@string/start_quiz"
         android:textSize="24sp"
@@ -20,116 +20,116 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="157dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginLeft="152dp"
-        android:layout_marginTop="128dp"
+        android:id="@+id/add_checkBox"
+        android:layout_width="147dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="92dp"
         android:text="@string/addition"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="156dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginLeft="152dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/sub_checkBox"
+        android:layout_width="147dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
         android:text="@string/subtraction"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/add_checkBox" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
-        android:layout_width="157dp"
-        android:layout_height="51dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginLeft="152dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/mult_checkBox"
+        android:layout_width="147dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
         android:text="@string/multiplication"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/sub_checkBox" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
-        android:layout_width="159dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="152dp"
-        android:layout_marginLeft="152dp"
-        android:layout_marginTop="24dp"
+        android:id="@+id/div_checkBox"
+        android:layout_width="147dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
         android:text="@string/division"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+        app:layout_constraintTop_toBottomOf="@+id/mult_checkBox" />
 
     <ToggleButton
         android:id="@+id/toggleButton"
         android:layout_width="158dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="152dp"
-        android:layout_marginLeft="152dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:layout_marginTop="16dp"
         android:checked="false"
         android:text="@string/togglebutton"
         android:textOff="@string/whole_numbers"
         android:textOn="@string/decimal_numbers"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintTop_toBottomOf="@+id/div_checkBox" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/range_from"
         android:layout_width="178dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="128dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginRight="136dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Range From"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" tools:targetApi="o"/>
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/range_to"
         android:layout_width="178dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginRight="136dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Range To"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/range_from" />
 
     <EditText
-        android:id="@+id/editText5"
+        android:id="@+id/num_of_problems"
         android:layout_width="177dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="136dp"
-        android:layout_marginRight="136dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Number of Problems"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/range_to" />
 
     <EditText
-        android:id="@+id/editText6"
-        android:layout_width="224dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="388dp"
-        android:layout_marginLeft="388dp"
-        android:layout_marginTop="468dp"
+        android:id="@+id/num_of_decimals"
+        android:layout_width="177dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="192dp"
+        android:layout_marginLeft="192dp"
+        android:layout_marginTop="256dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="@string/number_of_decimal_places"
@@ -139,15 +139,15 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText7"
-        android:layout_width="401dp"
-        android:layout_height="81dp"
+        android:id="@+id/quiz_name"
+        android:layout_width="351dp"
+        android:layout_height="49dp"
         android:layout_marginTop="28dp"
+        android:autofillHints=""
         android:ems="10"
         android:hint="Quiz Name"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

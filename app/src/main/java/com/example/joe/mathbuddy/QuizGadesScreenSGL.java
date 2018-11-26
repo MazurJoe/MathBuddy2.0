@@ -62,6 +62,7 @@ public class QuizGadesScreenSGL extends AppCompatActivity {
         quizListView.setAdapter(adapter);
     }
 
+    //system goes to create Activity for SGL screen
     public void onClickCreateQuiz(View v){
         startActivity(new Intent(QuizGadesScreenSGL.this, CreateActivitySGL.class));
     }

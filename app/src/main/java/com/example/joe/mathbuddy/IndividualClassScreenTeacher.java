@@ -13,6 +13,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import android.support.v7.widget.Toolbar;
 
@@ -29,6 +30,7 @@ public class IndividualClassScreenTeacher extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_individual_class_screen);
 
+        //gets the name of the class that was clicked on and changes text in the toolbar
         Bundle bundle = getIntent().getExtras();
         if(bundle != null){
             toolbar = (Toolbar) findViewById(R.id.toolbar1);
@@ -38,6 +40,7 @@ public class IndividualClassScreenTeacher extends AppCompatActivity {
 
         studentsListView = findViewById(R.id.studentsList_View);
 
+        //when a student is clicked, their individual student screen is displayed
         studentsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -47,6 +50,7 @@ public class IndividualClassScreenTeacher extends AppCompatActivity {
             }
         });
 
+        //on long click remove student pop up is displayed
         studentsListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
@@ -60,36 +64,39 @@ public class IndividualClassScreenTeacher extends AppCompatActivity {
 
 
 
-        studentsList.add("Student 1");
-        studentsList.add("Student 2");
-        studentsList.add("Student 3");
-        studentsList.add("Student 4");
-        studentsList.add("Student 5");
-        studentsList.add("Student 6");
-        studentsList.add("Student 7");
-        studentsList.add("Student 8");
-        studentsList.add("Student 9");
-        studentsList.add("Student 10");
-        studentsList.add("Student 11");
-        studentsList.add("Student 12");
-        studentsList.add("Student 13");
-        studentsList.add("Student 14");
-        studentsList.add("Student 15");
-        studentsList.add("Student 16");
-        studentsList.add("Student 17");
-        studentsList.add("Student 18");
-        studentsList.add("Student 19");
-        studentsList.add("Student 20");
-        studentsList.add("Student 21");
-        studentsList.add("Student 22");
-        studentsList.add("Student 23");
-        studentsList.add("Student 24");
+        studentsList.add("Kevin Smith");
+        studentsList.add("Tom Berry");
+        studentsList.add("Katlin ");
+        studentsList.add("Carlos Robbins");
+        studentsList.add("Damon Patterson");
+        studentsList.add("Lindsay Brady");
+        studentsList.add("Beth Turner");
+        studentsList.add("Gerald Santiago");
+        studentsList.add("Lynette Morris");
+        studentsList.add("David Osborne");
+        studentsList.add("Candace Cannon");
+        studentsList.add("Charles Francis");
+        studentsList.add("Ken Jones");
+        studentsList.add("Howard Day");
+        studentsList.add("Chris Rivera");
+        studentsList.add("Jean George");
+        studentsList.add("Dewey Mccormick");
+        studentsList.add("Gail Mcguire");
+        studentsList.add("Johnny Lee");
+        studentsList.add("Jenna Leonard");
 
         adapter = new ArrayAdapter(IndividualClassScreenTeacher.this, android.R.layout.simple_list_item_1, studentsList);
+        adapter.sort(new Comparator<String>() {
+            @Override
+            public int compare(String first, String second) {
+                return first.compareTo(second);
+            }
+        });
         studentsListView.setAdapter(adapter);
 
     }
 
+    //if a user creates a class and then hits the back button, this prevents the create class popup from reappearing
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_BACK) {
@@ -98,10 +105,12 @@ public class IndividualClassScreenTeacher extends AppCompatActivity {
             return true;
     }
 
+    //displays the add student popup
     public void onClickAdd(View v){
         startActivity(new Intent(IndividualClassScreenTeacher.this, AddStudentPopUp.class));
     }
 
+    //system goes to the create activity for teacher screen
     public void onClick(View v){
         startActivity(new Intent( IndividualClassScreenTeacher.this, CreateActivityTeacher.class));
     }

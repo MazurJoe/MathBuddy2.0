@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/add_checkBox"
         android:layout_width="157dp"
         android:layout_height="51dp"
         android:layout_marginStart="152dp"
@@ -32,7 +32,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
+        android:id="@+id/sub_checkBox"
         android:layout_width="156dp"
         android:layout_height="50dp"
         android:layout_marginStart="152dp"
@@ -41,10 +41,10 @@
         android:text="@string/subtraction"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+        app:layout_constraintTop_toBottomOf="@+id/add_checkBox" />
 
     <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/mult_checkBox"
         android:layout_width="157dp"
         android:layout_height="51dp"
         android:layout_marginStart="152dp"
@@ -53,10 +53,10 @@
         android:text="@string/multiplication"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/sub_checkBox" />
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/div_checkBox"
         android:layout_width="159dp"
         android:layout_height="40dp"
         android:layout_marginStart="152dp"
@@ -65,7 +65,7 @@
         android:text="@string/division"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
+        app:layout_constraintTop_toBottomOf="@+id/mult_checkBox" />
 
     <ToggleButton
         android:id="@+id/toggleButton"
@@ -79,10 +79,10 @@
         android:textOff="@string/whole_numbers"
         android:textOn="@string/decimal_numbers"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintTop_toBottomOf="@+id/div_checkBox" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/range_from"
         android:layout_width="178dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
@@ -96,18 +96,18 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/range_to"
         android:layout_width="178dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="132dp"
-        android:layout_marginRight="132dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
         android:autofillHints=""
         android:ems="10"
         android:hint="Range To"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText5"
@@ -121,7 +121,7 @@
         android:hint="Number of Problems"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText4" />
+        app:layout_constraintTop_toBottomOf="@+id/range_to" />
 
     <EditText
         android:id="@+id/editText6"

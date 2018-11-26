@@ -10,7 +10,7 @@
     <android.support.v7.widget.CardView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="#FAEBD7"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:gravity="center"
             android:textColor="@android:color/black"
-            android:textSize="30sp"
+            android:textSize="24sp"
             tools:layout_editor_absoluteX="357dp"
             tools:layout_editor_absoluteY="317dp" />
     </android.support.v7.widget.CardView>

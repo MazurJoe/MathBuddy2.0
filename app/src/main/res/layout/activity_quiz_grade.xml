@@ -15,10 +15,11 @@
         android:theme="?attr/actionBarTheme"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:titleTextColor="#B7B7B7" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/grade"
         android:layout_width="143dp"
         android:layout_height="69dp"
         android:text="@string/_15_20"
